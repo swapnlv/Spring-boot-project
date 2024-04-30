@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+<body >
+	 <section>
+		
+		<div class="card mr-3 ml-3">
+			<div class="card-body justify-content-center align-items-center">
+				<div class="container d-flex justify-content-center align-items-center"><img th:src="@{'/image/' + ${contact.image}}" class="imageProfile"/></div>
+				<table class="d-flex justify-content-center">
+					<tr><td></td></tr>
+					<tr><br /><th><h4>SCM ID :</h4></th><td><h4 th:text="SCM+${contact.C_id}"></h4></td></tr>
+					<tr><th><h4>Name :</h3></th><td><h5 th:text="${contact.name}"></h3></td></tr>
+					<tr><th><h4>Phone :</h4></th><td><h5 th:text="${contact.phone}"></h3></td></tr>
+					<tr><th><h4>Email :</h4></th><td><h5 th:text="${contact.email}"></h3></td></tr>
+					<tr><th><h4>Work :</h4></th><td><h5 th:text="${contact.work}"></h3></td></tr>
+					<tr><th><h4>Nickname :</h4></th><td><h5 th:text="${contact.nickName}"></h3></td></tr>
+					<tr><th><h4>Description :</h4></th><td><h5 th:text="${contact.description}"></h3></td></tr>
+			   </table>
+			   <div class="d-grid gap-2 justify-content-center align-items-center">
+				   <a th:href="@{'/user/'+${contact.C_id}+'/delete-contact'}" class="btn btn-danger btn-lg">Delete</a><br>
+				   <a th:href="@{'/user/'+{contact.C_id}+'/update-contact'}" class="btn btn-warning btn-lg">Update</a>
+			   </div>
+			</div>
+		</div>
+	 
+	</section>
+</body>
+</html>	

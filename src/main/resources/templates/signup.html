@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+</head>
+<body>
+	|<section class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3 mt-2 ">
+					<div class="my-card ">
+						<div th:if="${session.message}" th:classappend=${session.message.type}  class="alert " role="alert">
+						  <p th:text="${session.message.content}" style="text-align: center;"></p>
+
+						</div>
+						<h3 class="text-center font-weight-bold">SignUp Here</h3>
+						<form action="/resetForm" class="text-uppercase" th:action="@{/doRegister}" th:object="${user}" method="post">
+						  <div class="mb-2">
+						    <label for="name1" class="form-label font-weight-bold">Full Name</label>
+						    <input type="text"  th:field="*{name}" class="form-control form-control-sm"  th:classappend="${#fields.hasErrors('name') ? 'is-invalid': ''}" id="name-field" name="name" th:value="${user.name}" >
+						    <div class="invalid-feedback" th:each="e: ${#fields.errors('name')}" th:text="${e}">
+						    	 
+						    </div>
+						  </div>
+						  
+						  <div class="mb-2">
+						    <label for="email" class="form-label font-weight-bold">Email</label>
+						    <input type="text" th:field="*{email}" class="form-control form-control-sm" th:classappend="${#fields.hasErrors('email') ? 'is-invalid': ''}" id="email-field" name="email" th:value="${user.email}">
+						    <div class="invalid-feedback" th:each="e: ${#fields.errors('email')}" th:text="${e}"></div>
+						  </div>
+						  <div class="mb-2">
+						    <label for="Password" class="form-label font-weight-bold">Password</label>
+						    <input type="password" class="form-control form-control-sm" id="password-field" name="password" th:value="${user.password}">
+						  </div>
+						  <div class="mb-2">
+						  <label for="desc" class="form-label font-weight-bold">About</label>
+						  <textarea name="about" id="about-field" cols="30" rows="5" class="form-control" th:text="${user.about}" ></textarea>
+						  </div>
+						  <div class="mb-2 form-check">
+						    <input type="checkbox" class="form-check-input" id="agreement" name="agreement">
+						    <label class="form-check-label font-weight-bold" for="exampleCheck1">Agreed to Terms and Conditions</label>
+						  </div>
+						  <button type="submit" class="btn btn-outline-success mt-3">Register</button>
+						  <button type="reset" class="btn btn-outline-warning mt-3">Reset</button>
+					   </form>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+</body>
+</html>	

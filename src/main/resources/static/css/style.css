@@ -1,0 +1,152 @@
+body {
+    background: rgb(192, 192, 192) !important ;
+}
+
+.bg-color{
+	background: #8080ff !important;
+}
+.navbar  {
+	position:fixed;
+}
+.banner{
+	background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("/image/smartcontactManager.jpg");
+	height:120vh;
+	width:100%;
+}
+.my-card{
+	background:white;
+	color:#8080ff;
+	padding:20px;
+	border-radius:15px;
+	opacity:80%;
+	
+}
+ 
+ .btn.btn-outline-success:hover {
+    color: #fff; /* Text color on hover */
+    background-color: #8080ff; /* Background color on hover */
+    border-color: #8080ff; /* Border color on hover */
+  }
+  
+ .btn.btn-outline-success {
+    color: #8080ff;            /* Text color */
+    border-color: #8080ff;     /* Border color */
+  }
+  
+ .logic-card{
+ 	    color: #8080ff;  
+ }
+#login .container #login-row #login-column #login-box { 
+  margin-top: 80px;
+  max-width: 600px;
+  height: 450px;
+  border: 1px solid #9C9C9C;
+  border-radius:5px;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login-form{
+	color: #8080ff;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+#login-button{
+	margin-top:50px;
+	background-color: #8080ff;            /* Text color */
+    border-color: #8080ff;     /* Border color */
+  }
+  
+.inlineIcons{
+	display:inline
+
+ }
+ @media only screen and (max-width:  600px){
+  .sidebar{
+    display:none;
+    width:80%!important;
+ 	padding-top:45px;
+ 	position:fixed;
+ 	height: 100%;
+ 	background:white;
+ 	 }
+ 	.content{
+ 		margin-left:0%!important;
+ 	}
+ }
+#sideBarID{
+	margin-top:73px;
+}
+.sidebar{
+
+ 	padding-top:30px;
+ 	width: 18%;
+ 	position:fixed;
+ 	height: 100%;
+ 	background:white;
+ 	z-index:9999999999999;
+ 	 }
+ .sidebar a{
+ 	display:block;
+ 	width:100%;
+ 	padding:10px 25px;
+ 	text-decoration:none;
+ 	color:gray;
+ 	
+ }
+.sidebar a:hover{
+	background: #8080ff;
+	text-decoration:none;
+	color:white;
+}
+.content{
+	margin-left:18%;
+	width:80%;
+	height:100%;
+	color:white;
+	
+}
+#iconBack{
+	top:0px;
+	
+}
+.crossBtn{
+	color:#8080ff;
+	top:0px;
+	right:10px;
+	position:absolute;
+	cursor:pointer;
+}
+
+#iconBar{
+	margin-top:10px;
+	margin-left:5px;
+	cursor:pointer;
+}
+.card{
+	color:#8080ff;
+}
+
+.profileImage{
+	height:35px;
+	width:35px;
+	object-fit:cover;
+	border-radius:20px;
+}
+.ContactCard{
+	align-content: center;
+}
+.imageProfile{
+	height:100px;
+	width:100px;
+	object-fit:cover;
+	border-radius:50px;
+	border: 5px solid gray;
+	
+}
+th{
+	color:gray;
+}
